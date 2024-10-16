@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reclamos - Fantasilandia</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Reclamos</h1>
+        <p>Por favor, completa el siguiente formulario para enviar tu reclamo.</p>
+        <form id="reclamoForm" onsubmit="enviarReclamo(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Tu Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Descripción del Reclamo:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <!-- Campo oculto para el destinatario fijo -->
+            <input type="hidden" id="destinatario" name="destinatario" value="contacto@fantasilandia.cl">
+
+            <button type="submit">Enviar Reclamo</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
